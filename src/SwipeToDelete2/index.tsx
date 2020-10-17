@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, FlatList} from 'react-native';
-import ListItem2 from './ListItem2';
+import ListItem from './ListItem';
 
 export type ItemType = {
   id: number;
@@ -17,7 +17,7 @@ const SwipeToDelete2: React.FC = () => {
     <View>
       <FlatList
         data={data}
-        renderItem={({item}) => <ListItem2 data={item} />}
+        renderItem={({item}) => <ListItem data={item} />}
         keyExtractor={(item) => `${item.id}`}
         ItemSeparatorComponent={() => (
           <View style={{backgroundColor: 'grey', height: 0.5}} />
