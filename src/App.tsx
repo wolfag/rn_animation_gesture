@@ -6,6 +6,7 @@ import SwipeToDelete from './SwipeToDelete';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import SwipeToDelete2 from './SwipeToDelete2';
 import TwitterHeader from './TwitterHeader';
+import PaperSwiper from './PaperSwiper';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,11 @@ const data = [
     id: 3,
     name: 'TwitterHeader',
     route: 'TwitterHeader',
+  },
+  {
+    id: 4,
+    name: 'PaperSwiper',
+    route: 'PaperSwiper',
   },
 ];
 
@@ -54,11 +60,12 @@ const DemoList: React.FC = () => {
 
 const RootStack: React.FC = () => (
   <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="DemoList" component={DemoList} />
       <Stack.Screen name="SwipeToDelete" component={SwipeToDelete} />
       <Stack.Screen name="SwipeToDelete2" component={SwipeToDelete2} />
       <Stack.Screen name="TwitterHeader" component={TwitterHeader} />
+      <Stack.Screen name="PaperSwiper" component={PaperSwiper} />
     </Stack.Navigator>
   </NavigationContainer>
 );

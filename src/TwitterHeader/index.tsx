@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {View, Image, ScrollView, Text, Animated} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import avatar from '../assets/wolf.jpg';
+import React from 'react';
+import {Animated, Image, ScrollView, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import avatar from '../assets/wolf.jpg';
 
 const HEADER_MAX_HEIGHT = 120;
 const HEADER_MIN_HEIGHT = 70;
@@ -11,9 +11,7 @@ const PROFILE_IMG_MIN_HEIGHT = 40;
 
 const TwitterHeader: React.FC = () => {
   const navigation = useNavigation();
-  useEffect(() => {
-    navigation.setOptions({headerShown: false});
-  }, [navigation]);
+
   const scrollY = new Animated.Value(0);
 
   const headerHeight = scrollY.interpolate({

@@ -1,5 +1,13 @@
+import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {FlatList, SafeAreaView, StyleSheet, View} from 'react-native';
+import {
+  FlatList,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import ItemBox from './ItemBox';
 
 export type ItemType = {
@@ -27,6 +35,7 @@ const data: ItemType[] = [
 ];
 
 const SwipeToDelete: React.FC = () => {
+  const navigation = useNavigation();
   const [list, setList] = useState(data);
 
   const deleteItem = (index: number) => {
@@ -37,6 +46,9 @@ const SwipeToDelete: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <TouchableOpacity onPress={navigation.goBack}>
+        <Text>Back</Text>
+      </TouchableOpacity>
       <FlatList
         data={list}
         keyExtractor={(item) => `${item.id}`}
