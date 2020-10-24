@@ -8,6 +8,8 @@ import SwipeToDelete2 from './SwipeToDelete2';
 import TwitterHeader from './TwitterHeader';
 import PaperSwiper from './PaperSwiper';
 import MusicBar from './MusicBar';
+import AppleApp from './AppleApp';
+import ShuffleImg from './ShuffleImg';
 
 const Stack = createStackNavigator();
 
@@ -36,6 +38,16 @@ const data = [
     id: 5,
     name: 'MusicBar',
     route: 'MusicBar',
+  },
+  {
+    id: 6,
+    name: 'AppleApp',
+    route: 'AppleApp',
+  },
+  {
+    id: 7,
+    name: 'ShuffleImg',
+    route: 'ShuffleImg',
   },
 ];
 
@@ -73,6 +85,8 @@ const RootStack: React.FC = () => (
       <Stack.Screen name="TwitterHeader" component={TwitterHeader} />
       <Stack.Screen name="PaperSwiper" component={PaperSwiper} />
       <Stack.Screen name="MusicBar" component={MusicBar} />
+      <Stack.Screen name="AppleApp" component={AppleApp} />
+      <Stack.Screen name="ShuffleImg" component={ShuffleImg} />
     </Stack.Navigator>
   </NavigationContainer>
 );
