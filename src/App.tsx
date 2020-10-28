@@ -10,6 +10,7 @@ import PaperSwiper from './PaperSwiper';
 import MusicBar from './MusicBar';
 import AppleApp from './AppleApp';
 import ShuffleImg from './ShuffleImg';
+import ActionSheet from './ActionSheet';
 
 const Stack = createStackNavigator();
 
@@ -49,6 +50,11 @@ const data = [
     name: 'ShuffleImg',
     route: 'ShuffleImg',
   },
+  {
+    id: 8,
+    name: 'ActionSheet',
+    route: 'ActionSheet',
+  },
 ];
 
 const DemoList: React.FC = () => {
@@ -87,6 +93,7 @@ const RootStack: React.FC = () => (
       <Stack.Screen name="MusicBar" component={MusicBar} />
       <Stack.Screen name="AppleApp" component={AppleApp} />
       <Stack.Screen name="ShuffleImg" component={ShuffleImg} />
+      <Stack.Screen name="ActionSheet" component={ActionSheet} />
     </Stack.Navigator>
   </NavigationContainer>
 );
