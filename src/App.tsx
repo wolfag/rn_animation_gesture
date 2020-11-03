@@ -12,6 +12,7 @@ import AppleApp from './AppleApp';
 import ShuffleImg from './ShuffleImg';
 import ActionSheet from './ActionSheet';
 import UberLogin from './UberLogin';
+import SkeletonUI from './SkeletonUI';
 
 const Stack = createStackNavigator();
 
@@ -61,6 +62,11 @@ const data = [
     name: 'UberLogin',
     route: 'UberLogin',
   },
+  {
+    id: 10,
+    name: 'SkeletonUI',
+    route: 'SkeletonUI',
+  },
 ];
 
 const DemoList: React.FC = () => {
@@ -101,6 +107,7 @@ const RootStack: React.FC = () => (
       <Stack.Screen name="ShuffleImg" component={ShuffleImg} />
       <Stack.Screen name="ActionSheet" component={ActionSheet} />
       <Stack.Screen name="UberLogin" component={UberLogin} />
+      <Stack.Screen name="SkeletonUI" component={SkeletonUI} />
     </Stack.Navigator>
   </NavigationContainer>
 );
