@@ -13,6 +13,7 @@ import ShuffleImg from './ShuffleImg';
 import ActionSheet from './ActionSheet';
 import UberLogin from './UberLogin';
 import SkeletonUI from './SkeletonUI';
+import ProLogin from './ProLogin';
 
 const Stack = createStackNavigator();
 
@@ -67,6 +68,11 @@ const data = [
     name: 'SkeletonUI',
     route: 'SkeletonUI',
   },
+  {
+    id: 11,
+    name: 'ProLogin',
+    route: 'ProLogin',
+  },
 ];
 
 const DemoList: React.FC = () => {
@@ -108,6 +114,7 @@ const RootStack: React.FC = () => (
       <Stack.Screen name="ActionSheet" component={ActionSheet} />
       <Stack.Screen name="UberLogin" component={UberLogin} />
       <Stack.Screen name="SkeletonUI" component={SkeletonUI} />
+      <Stack.Screen name="ProLogin" component={ProLogin} />
     </Stack.Navigator>
   </NavigationContainer>
 );
